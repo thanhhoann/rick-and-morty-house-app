@@ -7,6 +7,7 @@ export default function Footer() {
           <a
             href="https://github.com/thanhhoan77"
             target="_blank"
+            rel="noreferrer"
             className="footer-link"
           >
             Thanh Hoan
@@ -17,6 +18,7 @@ export default function Footer() {
           <a
             href="https://rickandmortyapi.com/"
             target="_blank"
+            rel="noreferrer"
             className="footer-link"
           >
             The Rick and Morty API{" "}

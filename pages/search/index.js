@@ -143,7 +143,9 @@ export default function RickAndMortyHomePage(props) {
             height: "70px",
           }}
           smooth
-          component={<img style={{ width: "70px" }} src={ScrollToTopImg} />}
+          component={
+            <Image src={ScrollToTopImg} layout="fill" objectFit="fit" />
+          }
         />
 
         <main className="main">
