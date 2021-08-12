@@ -34,8 +34,9 @@ export default function RickAndMortyHomePage(props) {
               <h1>RicknMorty House</h1>
               <p>
                 <span className="content-main">
-                  "The encyclopedia for Rick and Morty"
+                  &quot;The encyclopedia for Rick and Morty&quot;
                 </span>
+
                 <span className="content-sub">
                   Or whatever you wanna call it.
                 </span>

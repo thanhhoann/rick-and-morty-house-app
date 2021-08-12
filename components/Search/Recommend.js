@@ -14,15 +14,15 @@ export default function Recommend(props) {
     <>
       <div className="recommendBox">
         <h2>
-          Try &nbsp;"
+          Try &nbsp;
           <span className="span" onClick={recommendNameHandler}>
             rick
           </span>
-          ", &nbsp;"
+          , &nbsp;
           <span className="span" onClick={recommendStatusHandler}>
             alive
           </span>
-          "&nbsp; or you can &nbsp;
+          &nbsp; or you can &nbsp;
           <span className="span">
             <Link href="/search/set">
               <a>browse by set</a>

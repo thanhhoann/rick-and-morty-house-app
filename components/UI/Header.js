@@ -2,6 +2,7 @@ import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
+import Link from "next/link";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -22,7 +23,9 @@ export default function MenuAppBar() {
               </a>
             </Link>
           </IconButton>
-          <h3>RicknMorty House</h3>
+          <Link href="/search">
+            <h3>RicknMorty House</h3>
+          </Link>
         </Toolbar>
       </AppBar>
     </div>
