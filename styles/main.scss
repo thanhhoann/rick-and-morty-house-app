@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap");
+
+.container {
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: "Open Sans", sans-serif;
+  display: grid;
+  place-items: center;
+  background: #232526; /* fallback for old browsers */
+  background-size: 100%;
+  background: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.header-bar {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.form {
+  display: grid;
+  place-items: center;
+  color: white;
+
+  margin-bottom: 80px;
+  .text-field {
+    width: 50vw;
+  }
+}
+
+.recommendBox {
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  font-size: 0.8rem;
+  .span {
+    color: #1b9cfc;
+    cursor: pointer;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  background: #232526; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #414345,
+    #232526
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  border-radius: 10px;
+  max-width: 400px;
+  max-height: 400px;
+
+  margin: 10px;
+  display: grid;
+  place-items: center;
+  transition: all cubic-bezier(0.165, 0.84, 0.44, 1);
+
+  .img-container {
+    position: relative;
+    width: 300px;
+    height: 280px;
+
+    img {
+      border-radius: 10px 10px 0 0;
+      transition: all 5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+  }
+
+  &:hover {
+    background: #636e72; /* fallback for old browsers */
+    img {
+      transform: scale(1.3);
+    }
+  }
+
+  .card-info {
+    padding: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 0.7rem;
+
+    .card-species {
+      color: #cc8e35;
+      display: block;
+    }
+    .card-status {
+      position: relative;
+      bottom: 10px;
+      font-weight: 900;
+      font-size: 1rem;
+    }
+  }
+}
+
+.footer-container {
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #434343,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  padding: 20px;
+  text-align: center;
+
+  * {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+  .footer-pageTitle {
+    color: #95a5a6;
+  }
+  .footer-link {
+    color: #3498db;
+  }
+}

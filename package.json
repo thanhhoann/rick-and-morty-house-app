@@ -1,0 +1,39 @@
+{
+  "name": "the-whatsoever-wiki",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
+    "framer-motion": "^4.1.17",
+    "next": "11.0.1",
+    "next-compose-plugins": "^2.2.1",
+    "next-images": "^1.8.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.12.2",
+    "react-infinite-loader": "^1.0.4",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-scroll-to-top": "^1.0.5",
+    "react-use-hover": "^2.0.0",
+    "rickmortyapi": "^0.3.0",
+    "sass": "^1.37.5",
+    "use-media": "^1.4.0"
+  },
+  "devDependencies": {
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.0.1"
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "next.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
