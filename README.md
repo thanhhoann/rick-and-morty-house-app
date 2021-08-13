@@ -2,7 +2,7 @@
 <h2> ⚠️ Still building <h2>
    
 <h3>
-<a href="https://rick-and-morty-house-app.vercel.app/" target="_blank">
+<a href="https://rick-and-morty-house.vercel.app/" target="_blank">
    Live demo 🚀 
 </a>
    </h3>
