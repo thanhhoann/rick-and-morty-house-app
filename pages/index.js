@@ -5,10 +5,13 @@ import Image from "next/image";
 
 import { motion } from "framer-motion";
 import { useMedia } from "use-media";
+import Loader from "react-loader-spinner";
 
 export default function RickAndMortyHomePage(props) {
   // check if its wide enough
   const isDesktopScreen = useMedia({ minWidth: 900 });
+
+  const [isLoading, setIsLoading] = useState(false);
 
   const easing = [0.6, -0.05, 0.01, 0.99];
   const title = {
@@ -36,6 +39,17 @@ export default function RickAndMortyHomePage(props) {
       transition: { duration: 1, ease: easing },
     },
   };
+
+  let loadingSpinner = (
+    <Loader
+      style={{ position: "relative", left: "70px" }}
+      type="Puff"
+      color="cyan"
+      height={200}
+      width={200}
+      timeout={8000} //3 secs
+    />
+  );
 
   return (
     <>
@@ -66,11 +80,19 @@ export default function RickAndMortyHomePage(props) {
                   Or whatever you wanna call it.
                 </span>
               </p>
-              <div className="home-button">
+
+              {isLoading ? (
+                loadingSpinner
+              ) : (
                 <Link href="/search">
-                  <a>Get started</a>
+                  <motion.div
+                    className="home-button"
+                    onClick={() => setIsLoading(true)}
+                  >
+                    <a>{isLoading ? "Going home..." : "Get started"}</a>
+                  </motion.div>
                 </Link>
-              </div>
+              )}
             </div>
           </section>
         </div>

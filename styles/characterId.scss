@@ -8,4 +8,18 @@
     align-items: center;
     flex-direction: column;
   }
+  button {
+    cursor: pointer;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: orange;
+    border-radius: 10px;
+    font-family: "Roboto";
+    letter-spacing: 2px;
+    font-size: 1.4rem;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  button:hover {
+    transform: translateY(-20px);
+  }
 }

@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { motion, useAnimation } from "framer-motion";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import Loader from "react-loader-spinner";
+import { useInView } from "react-intersection-observer";
+import { motion, useAnimation } from "framer-motion";
+
 export default function Character(props) {
+  const [isLoading, setIsLoading] = useState(false);
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -19,15 +22,29 @@ export default function Character(props) {
     }
   }, [controls, inView]);
 
+  let loadingSpinner = (
+    <Loader type="BallTriangle" color="#00BFFF" height={80} width={80} />
+  );
+
   const easing = [0.6, -0.05, 0.01, 0.99];
   const item = {
     initial: {
-      y: 70,
+      x: 200,
+      opacity: 0,
     },
     animate: {
-      y: 0,
+      x: 0,
+      opacity: 1,
       transition: { duration: 1, ease: easing },
     },
+  };
+
+  const hoverHandler = {
+    scale: 0.9,
+  };
+
+  const tapHandler = {
+    scale: 1.8,
   };
 
   return (
@@ -38,6 +55,8 @@ export default function Character(props) {
         animate={controls}
         ref={ref}
         className="card"
+        whileHover={hoverHandler}
+        whileTap={tapHandler}
       >
         <div className="img-container">
           <Image

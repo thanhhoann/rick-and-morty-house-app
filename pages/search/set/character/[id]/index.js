@@ -1,13 +1,27 @@
 import React, { useState } from "react";
-import tinyRick, { getCharacter } from "rickmortyapi";
-import { motion } from "framer-motion";
-import Image from "next/image";
-
 import Layout from "../../../../../components/UI/Layout";
 
+import Image from "next/image";
+import Link from "next/link";
+
+import tinyRick, { getCharacter } from "rickmortyapi";
+import Loader from "react-loader-spinner";
+import { motion } from "framer-motion";
+
 export default function CharacterId({ data }) {
+  const [isLoading, setIsLoading] = useState(false);
   const { name, image, status, species, gender, origin, location, episode } =
     data;
+
+  const loadingSpinner = (
+    <Loader
+      type="Puff"
+      color="orange"
+      height={100}
+      width={100}
+      timeout={9000}
+    />
+  );
 
   let genderTranslated = "";
   if (gender === "Male") {
@@ -42,6 +56,13 @@ export default function CharacterId({ data }) {
                 {origin.name}.
               </h4>
             </section>
+            <Link href="/search">
+              {isLoading ? (
+                loadingSpinner
+              ) : (
+                <button onClick={() => setIsLoading(true)}>Back to home</button>
+              )}
+            </Link>
           </main>
         </div>
       </Layout>

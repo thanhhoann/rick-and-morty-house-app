@@ -12,15 +12,16 @@ import InputAdornment from "@material-ui/core/InputAdornment";
 import tinyRick, { getCharacter } from "rickmortyapi";
 
 export default function SearchForm(props) {
-  let defaultStatus = ["Alive", "Dead", "Unknown", "alive", "dead", "unknown"];
-
+  // get user input
   const [userInput, setUserInput] = useState("");
 
   // set current page to 1, scroll down to increase
   const [currentPage, setCurrentPage] = useState(1);
 
-  // get data from searches
+  // main data
   const [characters, setCharacters] = useState(props.initialCharacters.results);
+
+  let defaultStatus = ["Alive", "Dead", "Unknown", "alive", "dead", "unknown"];
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
