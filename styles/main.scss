@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,400;1,400;1,700&display=swap");
 
 .container {
   min-height: 100vh;
   min-width: 100vw;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Georama", sans-serif;
+  letter-spacing: 2px;
   display: grid;
   place-items: center;
   background: #232526; /* fallback for old browsers */
@@ -18,6 +20,7 @@
     #414345,
     #232526
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #262329;
 }
 
 .header-bar {
@@ -32,6 +35,14 @@
     #434343,
     #000000
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  .header-title {
+    font-family: "Georama", sans-serif;
+    letter-spacing: 3px;
+    &:hover {
+      letter-spacing: 5px;
+      color: orange;
+    }
+  }
 }
 
 .form {
@@ -39,7 +50,6 @@
   place-items: center;
   color: white;
 
-  margin-bottom: 80px;
   .text-field {
     width: 50vw;
   }
@@ -57,6 +67,7 @@
 }
 
 .main {
+  margin: 50px 0 100px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,19 +75,8 @@
 }
 
 .card {
+  cursor: pointer;
   flex: 1;
-  background: #232526; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #414345,
-    #232526
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #414345,
-    #232526
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   color: white;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   border-radius: 10px;
@@ -95,15 +95,13 @@
 
     img {
       border-radius: 10px 10px 0 0;
-      transition: all 5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+      transition: all 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
   }
 
   &:hover {
-    background: #636e72; /* fallback for old browsers */
-    img {
-      transform: scale(1.3);
-    }
+    letter-spacing: 3px;
   }
 
   .card-info {

@@ -21,6 +21,7 @@
     "react-hook-form": "^7.12.2",
     "react-infinite-loader": "^1.0.4",
     "react-infinite-scroll-component": "^6.1.0",
+    "react-intersection-observer": "^8.32.0",
     "react-scroll-to-top": "^1.0.5",
     "react-use-hover": "^2.0.0",
     "rickmortyapi": "^0.3.0",

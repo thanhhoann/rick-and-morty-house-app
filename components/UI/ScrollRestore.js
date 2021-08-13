@@ -1,38 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import ScrollToTopImg from "../../public/willpower.svg";
+import ScrollToTop from "react-scroll-to-top";
+import Image from "next/image";
 
-export default function ScrollRestore() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-  useEffect(() => {
-    // Button is displayed after scrolling for 500 pixels
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 500) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
-
-    window.addEventListener("scroll", toggleVisibility);
-
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
-
-  //scroll-to-top classes: fixed, bottom:0, right:0
+export default function ScrollRestoration() {
   return (
-    <div clasName="scroll-to-top">
-      {isVisible && (
-        <div onClick={scrollToTop}>
-          <h3 style={{ color: "white" }}>Go up!</h3>
-        </div>
-      )}
-    </div>
+    <ScrollToTop
+      style={{
+        backgroundColor: "transparent",
+        width: "70px",
+        height: "70px",
+      }}
+      smooth
+      component={<Image src={ScrollToTopImg} layout="fill" objectFit="fit" />}
+    />
   );
 }

@@ -12,5 +12,9 @@ import tinyRick, { getCharacter } from "rickmortyapi";
 import Layout from "../../../components/UI/Layout";
 
 export default function SearchBySet() {
-  return <></>;
+  return (
+    <>
+      <h1>Browse by set</h1>
+    </>
+  );
 }

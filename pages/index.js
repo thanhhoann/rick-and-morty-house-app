@@ -1,26 +1,49 @@
 import React, { useState, useEffect } from "react";
-import Recommend from "../components/Search/Recommend";
-import Layout from "../components/UI/Layout";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image";
 
-import TextField from "@material-ui/core/TextField";
-import SearchIcon from "@material-ui/icons/Search";
-import InputAdornment from "@material-ui/core/InputAdornment";
-import tinyRick, { getCharacter } from "rickmortyapi";
+import { motion } from "framer-motion";
 import { useMedia } from "use-media";
 
 export default function RickAndMortyHomePage(props) {
   // check if its wide enough
   const isDesktopScreen = useMedia({ minWidth: 900 });
 
+  const easing = [0.6, -0.05, 0.01, 0.99];
+  const title = {
+    initial: {
+      opacity: 0,
+      scale: 0.3,
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      y: [0, -50, 0],
+      transition: { duration: 1, ease: easing },
+    },
+  };
+
+  const button = {
+    initial: {
+      opacity: 0,
+      scale: 0.3,
+    },
+    animate: {
+      opacity: 1,
+      scale: 1,
+      y: [0, -50, 0],
+      transition: { duration: 1, ease: easing },
+    },
+  };
+
   return (
     <>
       <Head>
-        <title>RicknMorty House</title>
+        <title>Rick and Morty</title>
         <link rel="icon" href="/ricknmorty.ico" />
       </Head>
+
       {isDesktopScreen ? (
         <div className="home-container">
           <Image
@@ -31,7 +54,9 @@ export default function RickAndMortyHomePage(props) {
           />
           <section>
             <div className="home-content">
-              <h1>RicknMorty House</h1>
+              <motion.h1 variants={title} initial="initial" animate="animate">
+                RicknMorty House
+              </motion.h1>
               <p>
                 <span className="content-main">
                   &quot;The encyclopedia for Rick and Morty&quot;
@@ -51,21 +76,22 @@ export default function RickAndMortyHomePage(props) {
         </div>
       ) : (
         <div className="mobile-container">
-          <Image
-            className="image"
-            src="https://images.alphacoders.com/876/876589.jpg"
-            layout="fill"
-            objectFit="cover"
-          />
           <div className="content">
             <section className="title">
-              <h1>RicknMorty House</h1>
+              <motion.h1 variants={title} initial="initial" animate="animate">
+                RicknMorty House
+              </motion.h1>
             </section>
-            <div className="button">
+            <motion.div
+              variants={button}
+              initial="initial"
+              animate="animate"
+              className="button"
+            >
               <Link href="/search">
                 <a>Get started</a>
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       )}

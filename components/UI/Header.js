@@ -11,7 +11,7 @@ export default function MenuAppBar() {
       <AppBar position="fixed" className="header-bar">
         <Toolbar>
           <IconButton edge="start" aria-label="menu">
-            <Link href="/rick-and-morty">
+            <Link href="/search">
               <a>
                 <Image
                   src="https://www.freeiconspng.com/uploads/rick-and-morty-icon-png-26.png"
@@ -23,7 +23,9 @@ export default function MenuAppBar() {
             </Link>
           </IconButton>
           <Link href="/search">
-            <h3>RicknMorty House</h3>
+            <a>
+              <h3 className="header-title">RicknMorty House</h3>
+            </a>
           </Link>
         </Toolbar>
       </AppBar>

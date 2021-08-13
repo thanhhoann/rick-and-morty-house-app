@@ -1,0 +1,11 @@
+.characterId-card {
+  color: white;
+  display: grid;
+  place-items: center;
+
+  .main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
